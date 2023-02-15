@@ -6,7 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palindrome</title>
   </head>
-  <body>
-    <script></script>
+  <body style="background-color: black">
+    <script>
+      // TODO: à partir d'une chaine caractère
+      // const word = "bonjour";
+
+      // function isPalindrome(mot) {
+      //   const wordReverse = mot.split("").reverse().join("").toLowerCase();
+      //   return wordReverse === mot.toLowerCase();
+      // }
+
+      // if (isPalindrome(word)) {
+      //   console.log(`${word} est un palindrome`);
+      // } else {
+      //   console.log(`${word} n'est un pas palindrome`);
+      // }
+
+      // TODO: à partir d'un tableau
+      const array = ["bo NJo uR   ", "   kA  yaK ", "So  S", "n  oN "];
+
+      const isPalindrome = array.map((mot) => {
+        const wordReverse =
+          mot.split("").reverse().join("").toLowerCase().replace(/\s/g, "") ===
+          mot.toLowerCase().replace(/\s/g, "");
+
+        if (wordReverse) {
+          console.log(`${mot} est un palindrome`);
+        } else {
+          console.log(`${mot} n'est un pas palindrome`);
+        }
+      });
+    </script>
   </body>
 </html>
