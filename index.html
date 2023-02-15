@@ -31,9 +31,13 @@
           mot.toLowerCase().replace(/\s/g, "");
 
         if (wordReverse) {
-          console.log(`${mot} est un palindrome`);
+          console.log(
+            `${mot.toLowerCase().replace(/\s/g, "")} est un palindrome`
+          );
         } else {
-          console.log(`${mot} n'est un pas palindrome`);
+          console.log(
+            `${mot.toLowerCase().replace(/\s/g, "")} n'est un pas palindrome`
+          );
         }
       });
     </script>
