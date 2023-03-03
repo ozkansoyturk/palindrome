@@ -40,6 +40,14 @@
           );
         }
       });
+
+      const repeatN = (N, fn) => {
+        for (let i = 0; i < N; i++) {
+          fn();
+        }
+      };
+
+      repeatN(15, () => console.log("salut"));
     </script>
   </body>
 </html>
