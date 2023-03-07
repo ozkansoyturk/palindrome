@@ -9,23 +9,23 @@
   <body style="background-color: black">
     <script>
       // TODO: à partir d'une chaine caractère
-      // const word = "bonjour";
+      const word = "kayak";
 
-      // function isPalindrome(mot) {
-      //   const wordReverse = mot.split("").reverse().join("").toLowerCase();
-      //   return wordReverse === mot.toLowerCase();
-      // }
+      function isPalindrome(mot) {
+        const wordReverse = mot.split("").reverse().join("").toLowerCase();
+        return wordReverse === mot.toLowerCase();
+      }
 
-      // if (isPalindrome(word)) {
-      //   console.log(`${word} est un palindrome`);
-      // } else {
-      //   console.log(`${word} n'est un pas palindrome`);
-      // }
+      if (isPalindrome(word)) {
+        console.log(`${word} est un palindrome`);
+      } else {
+        console.log(`${word} n'est un pas palindrome`);
+      }
 
       // TODO: à partir d'un tableau
       const array = ["b o NJo uR   ", "  kA  yaK ", "So  S", "n  oN "];
 
-      array.forEach((mot) => {
+      array.forEach((mot, i) => {
         const wordReverse =
           mot.split("").reverse().join("").toLowerCase().replace(/\s/g, "") ===
           mot.toLowerCase().replace(/\s/g, "");
@@ -39,8 +39,11 @@
             `${mot.toLowerCase().replace(/\s/g, "")} n'est un pas palindrome`
           );
         }
+
+        console.log(`à l'index ${i} nous avons "${mot}"`);
       });
 
+      // TODO: repeat
       const repeatN = (N, fn) => {
         for (let i = 0; i < N; i++) {
           fn();
